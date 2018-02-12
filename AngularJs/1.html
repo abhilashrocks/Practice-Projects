@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myAPP">
+<head>
+<meta charset="UTF-8">
+<title> Angular Js </title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="lang">
+		Select Your Fav Lang:
+		<button ng-click=CSharp()>CSharp</button>
+		<br>
+           {{favLang}}
+	</div>
+	<script>
+		var app= angular.module('myAPP',[]);
+
+		app.controller('lang',function($scope){
+
+           $scope.favLang = 'none';
+
+           $scope.CSharp=function() {
+           	$scope.favLang = "C#"
+           }
+
+		})
+	</script>
+</body>
+</html>
